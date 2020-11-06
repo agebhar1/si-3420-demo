@@ -46,23 +46,6 @@ public class DemoApplication {
                 .get();
     }
 
-    @Bean
-    public String assertDependency(@Qualifier("prometheusMeterRegistry") PrometheusMeterRegistry registry) {
-        return registry.toString();
-    }
-
-    @Bean("meterRegistry")
-    @ConditionalOnProperty(name = "register", havingValue = "SimpleMeterRegistry")
-    public MeterRegistry simpleMeterRegistry() {
-        return new SimpleMeterRegistry();
-    }
-
-    @Bean("meterRegistry")
-    @ConditionalOnProperty(name = "register", havingValue = "PrometheusMeterRegistry")
-    public MeterRegistry prometheusMeterRegistry(PrometheusMeterRegistry registry) {
-        return registry;
-    }
-
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
