@@ -2,6 +2,8 @@
 
 [Issue 3420](https://github.com/spring-projects/spring-integration/issues/3420):
 
+See branch for [proposed workaround](https://github.com/agebhar1/si-3420-demo/tree/workaround).
+
 Spring Integration metrics (channel, etc.) are missing after update from Spring Integration 5.3.2 to 5.3.3 by update
 of Spring Boot from 2.3.4 to 2.3.5.
 
